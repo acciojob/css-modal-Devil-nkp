@@ -11,7 +11,9 @@ closeModal.addEventListener("click", function () {
 });
 
 modal.addEventListener("click", function (event) {
-    if (event.target === modal) {
+    const modalContent = document.querySelector(".modal-content");
+
+    if (!modalContent.contains(event.target)) {
         modal.style.display = "none";
     }
 });
